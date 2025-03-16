@@ -13,4 +13,5 @@ Bold: 20,
 export const fontColor = {
 primary: '#0E0E0E',
 secondary: '#5B5E6B',
+graphic: '#F69322',
 };
