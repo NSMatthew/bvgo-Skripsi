@@ -23,14 +23,13 @@ const SplashScreen = () => {
         duration: 1000,
         useNativeDriver: true,
       }).start(() => {
-        navigation.replace('Home'); // Now it works!
+        navigation.replace('Home');
       });
     }, 2000);
   }, []);
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Text style={styles.splashText}>Splash Screen</Text>
       <Image source={require('../assets/images/logo-bvgo.png')} style={styles.logo} />
       <Text style={styles.fromText}>from</Text>
       <Image source={require('../assets/images/logo-bukitvista.png')} style={styles.footerLogo} />
