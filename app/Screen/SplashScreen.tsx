@@ -2,17 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types';// Import the type
+import { RootStackParamList } from '../Navigation/types'; // Pastikan path benar
 
-// Define the correct navigation type
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 const SplashScreen = () => {
-  const navigation = useNavigation<SplashScreenNavigationProp>(); // Use typed navigation
+  const navigation = useNavigation<SplashScreenNavigationProp>();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    // Fade-in animation
+    // Animasi fade-in
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 1000,
@@ -25,7 +24,7 @@ const SplashScreen = () => {
         duration: 1000,
         useNativeDriver: true,
       }).start(() => {
-        navigation.replace('Home'); // ✅ Now "replace" is recognized
+        navigation.replace('Home'); // Pindah ke Home setelah animasi selesai
       });
     }, 2000);
   }, []);
