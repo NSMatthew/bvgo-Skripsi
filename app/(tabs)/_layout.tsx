@@ -1,14 +1,15 @@
 import { Stack } from 'expo-router';
+import { RootStackParamList } from '../Navigation/types';  // Import the type
 
 export default function Layout() {
   return (
-    <Stack initialRouteName="/Screen/SplashScreen">  {/* Set SplashScreen as the first screen */}
+    <Stack initialRouteName="Splash">  {/* Set SplashScreen as the first screen */}
       <Stack.Screen 
-        name="/Screen/SplashScreen"  // Define SplashScreen as a route
+        name="Splash"  // Define SplashScreen as a route (no need for "/Screen/...")
         options={{ headerShown: false }}  // Hide the header for SplashScreen
       />
       <Stack.Screen 
-        name="/Screen/Home"  // Define Home as a route
+        name="Home"  // Define Home as a route (no need for "/Screen/...")
         options={{ headerShown: false }}  // Hide the header for HomeScreen
       />
     </Stack>
