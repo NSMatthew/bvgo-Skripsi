@@ -2,37 +2,34 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types'; 
+import { RootStackParamList } from '../Navigation/types'; // Mengimpor RootStackParamList
 
+// Mendefinisikan tipe navigasi untuk SplashScreen
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 const SplashScreen = () => {
+  // Menggunakan useNavigation dengan tipe yang sesuai
   const navigation = useNavigation<SplashScreenNavigationProp>();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    // Animasi untuk fade-in
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 1000,
       useNativeDriver: true,
     }).start();
 
+    // Transisi setelah 2 detik ke HomeScreen
     setTimeout(() => {
-      Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 1000,
-        useNativeDriver: true,
-      }).start(() => {
-        navigation.replace('Home');
-      });
+      navigation.replace('Home'); // Navigasi ke Home setelah animasi selesai
     }, 2000);
-  }, []);
+  }, [navigation, fadeAnim]);
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Image source={require('../assets/images/logo-bvgo.png')} style={styles.logo} />
-      <Text style={styles.fromText}>from</Text>
-      <Image source={require('../assets/images/logo-bukitvista.png')} style={styles.footerLogo} />
+      <Text style={styles.splashText}>Splash Screen</Text>
+      <Image source={require('../../assets/images/logo-bvgo.png')} style={styles.logo} />
     </Animated.View>
   );
 };
@@ -47,25 +44,13 @@ const styles = StyleSheet.create({
   splashText: {
     position: 'absolute',
     top: 40,
-    left: 20,
-    fontSize: 16,
+    fontSize: 24,
     color: '#888',
   },
   logo: {
     width: 200,
     height: 100,
     resizeMode: 'contain',
-  },
-  fromText: {
-    marginTop: 20,
-    fontSize: 16,
-    color: '#000',
-  },
-  footerLogo: {
-    width: 120,
-    height: 50,
-    resizeMode: 'contain',
-    marginTop: 10,
   },
 });
 
