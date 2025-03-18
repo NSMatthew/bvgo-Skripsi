@@ -1,16 +1,18 @@
 import React from 'react';
-import { Stack } from 'expo-router'; // Import Stack untuk navigasi antar screen
+import { Stack } from 'expo-router';  // Gunakan Stack untuk navigasi antar layar
 
-export default function TabLayout() {
+export default function Layout() {
   return (
     <Stack>
+      {/* Splash Screen pertama kali ditampilkan */}
       <Stack.Screen 
-        name="Splash" // SplashScreen akan ditampilkan pertama kali
-        options={{ headerShown: false }}  // Menyembunyikan header pada SplashScreen
+        name="Splash" 
+        options={{ headerShown: false }}  // Menyembunyikan header untuk SplashScreen
       />
+      {/* Home Screen setelah Splash Screen */}
       <Stack.Screen 
-        name="Home" // Setelah SplashScreen, akan menuju HomeScreen
-        options={{ headerShown: false }}  // Menyembunyikan header pada HomeScreen
+        name="Home" 
+        options={{ headerShown: false }}  // Menyembunyikan header untuk HomeScreen
       />
     </Stack>
   );
