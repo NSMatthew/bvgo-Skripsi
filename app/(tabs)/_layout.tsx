@@ -1,5 +1,4 @@
 import { Stack } from 'expo-router';
-import { RootStackParamList } from '../Navigation/types';  // Import the type
 
 export default function Layout() {
   return (
