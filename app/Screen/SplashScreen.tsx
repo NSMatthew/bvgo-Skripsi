@@ -29,7 +29,7 @@ const SplashScreen = () => {
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
       <Image source={require('../../assets/images/logo-bvgo.png')} style={styles.logo} />
       <Text style={styles.splashText}>from</Text>
-      <Image source={require('../assets/logo-bukitvista.png')} style={styles.logo} />
+      <Image source={require('../../assets/logo-bukitvista.png')} style={styles.logo} />
     </Animated.View>
   );
 };
