@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <>
       {/* Redirect ensures the app navigates to the SplashScreen first */}
-      <Redirect href="/Screen/SplashScreen" />
+      <Redirect href="../Screen/SplashScreen" />
 
       {/* Stack Navigator to handle the navigation between screens */}
       <Stack initialRouteName="Splash">
