@@ -2,16 +2,17 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types'; // Pastikan path benar
+import { RootStackParamList } from '../Navigation/types';  // Pastikan path sesuai
 
+// Tipe navigasi
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 const SplashScreen = () => {
-  const navigation = useNavigation<SplashScreenNavigationProp>();
+  const navigation = useNavigation<SplashScreenNavigationProp>();  // Menggunakan navigasi yang terdefinisi
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    // Animasi fade-in
+    // Animasi fade-in untuk Splash Screen
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 1000,
@@ -19,14 +20,15 @@ const SplashScreen = () => {
     }).start();
 
     setTimeout(() => {
+      // Animasi fade-out dan navigasi ke Home setelahnya
       Animated.timing(fadeAnim, {
         toValue: 0,
-        duration: 1000,
+        duration: 2000,
         useNativeDriver: true,
       }).start(() => {
-        navigation.replace('Home'); // Pindah ke Home setelah animasi selesai
+        navigation.replace('Home');  // Pindah ke Home setelah animasi selesai
       });
-    }, 2000);
+    }, 2000);  // Durasi animasi fade-in (2000ms)
   }, []);
 
   return (
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   fromText: {
-    marginTop: 20,
+    marginTop: 30,
     fontSize: 16,
     color: '#000',
   },
