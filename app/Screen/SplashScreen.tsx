@@ -5,7 +5,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../Navigation/types';
 
 // Define navigation type for SplashScreen
-type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
+type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'SplashScreen'>;
 
 const SplashScreen = () => {
   const navigation = useNavigation<SplashScreenNavigationProp>();
