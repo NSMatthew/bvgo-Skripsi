@@ -1,10 +1,12 @@
 import { Stack } from 'expo-router';
+import { RootStackParamList } from '../Navigation/types';
 
 export default function Layout() {
   return (
-    <Stack initialRouteName="Screen/SplashScreen">  
-      <Stack.Screen name="Screen/SplashScreen" options={{ headerShown: false }} />
-      <Stack.Screen name="Screen/Home" options={{ headerShown: false }} />
+    <Stack>
+      {/* Menggunakan nama yang sesuai dengan yang ada di RootStackParamList */}
+      <Stack.Screen name="Splash" options={{ headerShown: false }} />
+      <Stack.Screen name="Home" options={{ headerShown: false }} />
     </Stack>
   );
 }
