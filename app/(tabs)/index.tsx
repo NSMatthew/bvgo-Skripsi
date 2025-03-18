@@ -1,75 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Text, Image, Animated, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types';// Import the type
+import React from 'react';
+import { Stack } from 'expo-router';
 
-// Define the correct navigation type
-type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
-
-const SplashScreen = () => {
-  const navigation = useNavigation<SplashScreenNavigationProp>(); // Use typed navigation
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    // Fade-in animation
-    Animated.timing(fadeAnim, {
-      toValue: 1,
-      duration: 1000,
-      useNativeDriver: true,
-    }).start();
-
-    setTimeout(() => {
-      Animated.timing(fadeAnim, {
-        toValue: 0,
-        duration: 1000,
-        useNativeDriver: true,
-      }).start(() => {
-        navigation.replace('Home'); // ✅ Now "replace" is recognized
-      });
-    }, 2000);
-  }, []);
-
+export default function Layout() {
   return (
-    <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Text style={styles.splashText}>Splash Screen</Text>
-      <Image source={require('../../assets/images/logo-bvgo.png')} style={styles.logo} />
-      <Text style={styles.fromText}>from</Text>
-      <Image source={require('../../assets/images/logo-bukitvista.png')} style={styles.footerLogo} />
-    </Animated.View>
+    <Stack>
+      <Stack.Screen name="Splash" options={{ headerShown: false }} />
+      <Stack.Screen name="Home" options={{ headerShown: false }} />
+    </Stack>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
-  },
-  splashText: {
-    position: 'absolute',
-    top: 40,
-    left: 20,
-    fontSize: 16,
-    color: '#888',
-  },
-  logo: {
-    width: 200,
-    height: 100,
-    resizeMode: 'contain',
-  },
-  fromText: {
-    marginTop: 20,
-    fontSize: 16,
-    color: '#000',
-  },
-  footerLogo: {
-    width: 120,
-    height: 50,
-    resizeMode: 'contain',
-    marginTop: 10,
-  },
-});
-
-export default SplashScreen;
+}
