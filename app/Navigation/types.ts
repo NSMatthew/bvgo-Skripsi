@@ -1,5 +1,5 @@
 export type RootStackParamList = {
-    Splash: undefined;
+    SplashScreen: undefined;
     Home: undefined;
   };
   
