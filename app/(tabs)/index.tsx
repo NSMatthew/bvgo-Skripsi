@@ -1,23 +1,19 @@
-import React from 'react';
-import { Redirect, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
+import { RootStackParamList } from '../Navigation/types'; // Import parameter tipe untuk route
 
-export default function Index() {
+export default function Layout() {
   return (
-    <>
-      {/* Redirect hanya dijalankan jika aplikasi pertama kali dibuka */}
-      <Redirect href="/Screen/SplashScreen" />
-
-      {/* Stack Navigator untuk mengatur navigasi */}
-      <Stack initialRouteName="Splash"> 
-        <Stack.Screen 
-          name="Splash"  
-          options={{ headerShown: false }}  
-        />
-        <Stack.Screen 
-          name="Home"  
-          options={{ headerShown: false }}  
-        />
-      </Stack>
-    </>
+    <Stack>
+      {/* File SplashScreen.tsx akan otomatis di-render sebagai screen pertama */}
+      <Stack.Screen 
+        name="Splash" // Nama file SplashScreen.tsx 
+        options={{ headerShown: false }} // Menyembunyikan header untuk SplashScreen
+      />
+      {/* File HomeScreen.tsx akan otomatis di-render setelah SplashScreen */}
+      <Stack.Screen 
+        name="Home"  // Nama file HomeScreen.tsx 
+        options={{ headerShown: false }}  // Menyembunyikan header untuk HomeScreen
+      />
+    </Stack>
   );
 }
