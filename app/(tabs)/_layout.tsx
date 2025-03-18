@@ -1,4 +1,6 @@
 import { Stack } from 'expo-router';
+import SplashScreen from '../Screen/SplashScreen';
+import HomeScreen from '../Screen/Home';
 
 export default function Layout() {
   return (
