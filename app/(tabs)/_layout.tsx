@@ -1,24 +1,10 @@
+import { Stack } from 'expo-router';
 
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-
-const HomeScreen = () => {
+export default function Layout() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
-    </View>
+    <Stack initialRouteName="Splash"> {/* Pastikan SplashScreen muncul pertama kali */}
+      <Stack.Screen name="Splash" options={{ headerShown: false }} />
+      <Stack.Screen name="Home" options={{ headerShown: false }} />
+    </Stack>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
-  },
-});
-
-export default HomeScreen;
+}
