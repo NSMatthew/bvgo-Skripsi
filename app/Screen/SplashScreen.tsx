@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types';
+import { RootStackParamList } from '../Navigation/types';  // Pastikan ini diimport
 
-// Define navigation type for SplashScreen
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 const SplashScreen = () => {
