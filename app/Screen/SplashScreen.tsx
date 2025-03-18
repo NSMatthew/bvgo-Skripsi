@@ -2,34 +2,34 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types'; // Mengimpor RootStackParamList
+import { RootStackParamList } from '../Navigation/types';
 
-// Mendefinisikan tipe navigasi untuk SplashScreen
+// Define navigation type for SplashScreen
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
 const SplashScreen = () => {
-  // Menggunakan useNavigation dengan tipe yang sesuai
   const navigation = useNavigation<SplashScreenNavigationProp>();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    // Animasi untuk fade-in
+    // Fade-in animation on mount
     Animated.timing(fadeAnim, {
       toValue: 1,
       duration: 1000,
       useNativeDriver: true,
     }).start();
 
-    // Transisi setelah 2 detik ke HomeScreen
+    // Transition to HomeScreen after 2 seconds
     setTimeout(() => {
-      navigation.replace('Home'); // Navigasi ke Home setelah animasi selesai
-    }, 2000);
+      navigation.replace('Home');
+    }, 2000); // Adjust the delay to match your splash screen duration
   }, [navigation, fadeAnim]);
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Text style={styles.splashText}>Splash Screen</Text>
       <Image source={require('../../assets/images/logo-bvgo.png')} style={styles.logo} />
+      <Text style={styles.splashText}>from</Text>
+      <Image source={require('../assets/logo-bukitvista.png')} style={styles.logo} />
     </Animated.View>
   );
 };
