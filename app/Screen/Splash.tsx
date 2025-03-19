@@ -6,7 +6,7 @@ import { RootStackParamList } from '../Navigation/types';  // Pastikan ini diimp
 
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
-const SplashScreen = () => {
+const Splash = () => {
   const navigation = useNavigation<SplashScreenNavigationProp>();
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default Splash;
