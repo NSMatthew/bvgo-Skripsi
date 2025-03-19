@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
 
 const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
+      <Image source={require('../../assets/images/logo-bukitvista.png')} style={styles.logo} />
     </View>
   );
 };
@@ -17,6 +19,11 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 24,
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
   },
 });
 
