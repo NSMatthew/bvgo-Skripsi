@@ -8,7 +8,7 @@ export default function Index() {
       <Redirect href="../Screen/SplashScreen" />
 
       {/* Stack Navigator to handle the navigation between screens */}
-      <Stack initialRouteName="SplashScreen">
+      <Stack initialRouteName="Splash">
         <Stack.Screen
           name="Splash"
           options={{ headerShown: false }} // Hide header for Splash screen
