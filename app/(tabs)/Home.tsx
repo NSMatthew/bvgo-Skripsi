@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-const HomeScreen = () => {
+const Home = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
@@ -12,12 +12,12 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   text: {
     fontSize: 24,
   },
 });
 
-export default HomeScreen;
+export default Home;

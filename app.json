@@ -34,9 +34,7 @@
         }
       ]
     ],
-    "assetBundlePatterns": [
-      "assets/images/*"  
-    ],
+    "assetBundlePatterns": ["assets/images/*"],
     "experiments": {
       "typedRoutes": true
     }
