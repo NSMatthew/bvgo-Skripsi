@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   splashText: {
     position: 'absolute',
     top: 40,
-    fontSize: 24,
+    fontSize: 16,
     color: '#888',
   },
   logo: {
