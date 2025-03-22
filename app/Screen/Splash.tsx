@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Animated, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../Navigation/types';  // Pastikan ini diimport
+import { RootStackParamList } from '../type';
 
 type SplashScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Splash'>;
 
@@ -26,9 +26,15 @@ const Splash = () => {
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Image source={require('../../assets/images/logo-bvgo.png')} style={styles.logo} />
+      <Image
+        source={require('../../assets/images/logo-bvgo.png')}
+        style={styles.logoBVGO}
+      />
       <Text style={styles.splashText}>from</Text>
-      <Image source={require('../../assets/images/logo-bukitvista.png')} style={styles.logo} />
+      <Image
+        source={require('../../assets/images/logo-bukitvista.png')}
+        style={styles.logoBV}
+      />
     </Animated.View>
   );
 };
@@ -42,13 +48,20 @@ const styles = StyleSheet.create({
   },
   splashText: {
     position: 'absolute',
-    top: 40,
+    top: '55%', // Adjust to a more appropriate position
     fontSize: 16,
     color: '#888',
+    fontWeight: 'bold',
   },
-  logo: {
+  logoBVGO: {
     width: 200,
     height: 100,
+    resizeMode: 'contain',
+    marginBottom: 10, // Adjust margin to create space between logos
+  },
+  logoBV: {
+    width: 160, // Adjust the size to make it proportionate to BVGO logo
+    height: 80,  // Adjust the height accordingly
     resizeMode: 'contain',
   },
 });
