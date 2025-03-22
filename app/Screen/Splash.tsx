@@ -26,13 +26,14 @@ const Splash = () => {
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
+      {/* BVGO Logo */}
       <Image
         source={require('../../assets/images/logo-bvgo.png')}
         style={styles.logoBVGO}
       />
-    
+      {/* "from" text */}
       <Text style={styles.splashText}>from</Text>
-      
+      {/* BukitVista Logo */}
       <Image
         source={require('../../assets/images/logo-bukitvista.png')}
         style={styles.logoBV}
@@ -47,26 +48,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
+    flexDirection: 'column', // Align elements vertically
+    paddingHorizontal: 30, // Add padding to left and right for spacing
   },
   splashText: {
     position: 'absolute',
-    top: '65%', // Adjust to a more appropriate position, closer to BukitVista logo
-    fontSize: 20,
+    top: '60%', // Move closer to the BukitVista logo
+    fontSize: 18, // Increased font size for better readability
     color: '#888',
     fontWeight: 'bold',
     textAlign: 'center', // Center text horizontally
   },
   logoBVGO: {
-    width: 150, // Increase the size of the BVGO logo
+    width: 220, // Increase the size of the BVGO logo
     height: 120, // Adjust height to maintain the proportions
     resizeMode: 'contain',
-    marginBottom: 20, // Adjust margin to create space between logos and text
+    marginBottom: 10, // Adjust margin to create space between logos and text
   },
   logoBV: {
-    width: 100, // Adjust the size to make it proportionate to BVGO logo
-    height: 50,  // Adjust the height accordingly
+    width: 180, // Adjust the size to make it proportionate to BVGO logo
+    height: 90,  // Adjust the height accordingly
     resizeMode: 'contain',
-    marginTop: 10,
   },
 });
 
