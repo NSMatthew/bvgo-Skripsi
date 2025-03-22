@@ -26,14 +26,13 @@ const Splash = () => {
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      {/* BVGO Logo */}
       <Image
         source={require('../../assets/images/logo-bvgo.png')}
         style={styles.logoBVGO}
       />
-      {/* "from" text */}
+    
       <Text style={styles.splashText}>from</Text>
-      {/* BukitVista Logo */}
+      
       <Image
         source={require('../../assets/images/logo-bukitvista.png')}
         style={styles.logoBV}
@@ -67,6 +66,7 @@ const styles = StyleSheet.create({
     width: 180, // Adjust the size to make it proportionate to BVGO logo
     height: 90,  // Adjust the height accordingly
     resizeMode: 'contain',
+    marginTop: 10,
   },
 });
 
