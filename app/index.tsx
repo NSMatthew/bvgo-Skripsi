@@ -51,12 +51,13 @@ const styles = StyleSheet.create({
     color: '#888',
     fontWeight: 'bold',
     textAlign: 'center', // Center text horizontally
+    marginTop: 20, // Adjust the margin-top to make "from" text a little further
   },
   logoBVGO: {
     width: 220, // Increase the size of the BVGO logo
     height: 120, // Adjust height to maintain the proportions
     resizeMode: 'contain',
-    marginBottom: 10, // Adjust margin to create space between logos and text
+    marginBottom: 30, // Adjust margin to create more space between logos and text
   },
   logoBV: {
     width: 180, // Adjust the size to make it proportionate to BVGO logo
