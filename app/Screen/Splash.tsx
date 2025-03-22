@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     textAlign: 'center', // Center text horizontally
   },
   logoBVGO: {
-    width: 220, // Increase the size of the BVGO logo
+    width: 150, // Increase the size of the BVGO logo
     height: 120, // Adjust height to maintain the proportions
     resizeMode: 'contain',
     marginBottom: 20, // Adjust margin to create space between logos and text
   },
   logoBV: {
-    width: 180, // Adjust the size to make it proportionate to BVGO logo
-    height: 90,  // Adjust the height accordingly
+    width: 100, // Adjust the size to make it proportionate to BVGO logo
+    height: 50,  // Adjust the height accordingly
     resizeMode: 'contain',
     marginTop: 10,
   },
