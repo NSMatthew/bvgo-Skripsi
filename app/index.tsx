@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30, // Add padding to left and right for spacing
   },
   splashText: {
-    position: 'absolute',
+    position: 'relative',
     top: '60%', // Move closer to the BukitVista logo
     fontSize: 18, // Increased font size for better readability
     color: '#888',
