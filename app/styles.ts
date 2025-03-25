@@ -1,4 +1,3 @@
-// styles.ts
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -16,10 +15,10 @@ export const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   splashText: {
-    position: 'relative',
+    position: 'absolute',
     top: '60%', // Move closer to the BukitVista logo
     fontSize: 18,
-    color: '#888',
+    color: '#0E0E0E',
     fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 20,
