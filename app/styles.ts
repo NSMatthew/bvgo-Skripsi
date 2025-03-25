@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: '#0E0E0E',
     fontWeight: 'regular',
+    position: 'relative',
   },
   logo: {
     width: 100,

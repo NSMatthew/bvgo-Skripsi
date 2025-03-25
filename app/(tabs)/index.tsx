@@ -31,7 +31,7 @@ export default function Index() {
         source={require("../../assets/images/logo-bvgo.png")}
         style={styles.logoBVGO}
       />
-      <Text style={styles.splashText}>from</Text>
+      <Text style={styles.regularText}>from</Text>
       <Image
         source={require("../../assets/images/logo-bukitvista.png")}
         style={styles.logoBV}
