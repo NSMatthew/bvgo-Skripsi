@@ -27,15 +27,11 @@ export default function Index() {
 
   return (
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <Image
-        source={require("../../assets/images/logo-bvgo.png")}
-        style={styles.logoBVGO}
-      />
+    <Image source={require("../../assets/images/logo-bvgo.png")} style={styles.logoBVGO} />
+    <>
       <Text style={styles.regularText}>from</Text>
-      <Image
-        source={require("../../assets/images/logo-bukitvista.png")}
-        style={styles.logoBV}
-      />
-    </Animated.View>
+    </>
+    <Image source={require("../../assets/images/logo-bukitvista.png")} style={styles.logoBV} />
+  </Animated.View>
   );
 }

@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     color: '#0E0E0E',
     fontWeight: 'regular',
     position: 'relative',
+    zIndex: 10,
   },
   logo: {
     width: 100,
