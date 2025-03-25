@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { View, Text, Image, Animated } from "react-native";
 import { useRouter } from "expo-router";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { styles } from "../styles"; // Mengimport file styles
+import { styles } from "../styles"; 
 
 export default function Index() {
   const router = useRouter();

@@ -6,8 +6,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  text: {
-    fontSize: 24,
+  regularText: {
+    fontFamily: 'Satoshi',
+    fontSize: 16,
+    color: '#0E0E0E',
+    fontWeight: 'regular',
   },
   logo: {
     width: 100,
