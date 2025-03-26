@@ -1,8 +1,7 @@
-import { supabase } from './supabase';
-import { User, Session } from '@supabase/supabase-js';  // Import tipe User dan Session
+import { supabase } from './supabase'; // Mengimpor supabase yang sudah dikonfigurasi
+import { User, Session } from '@supabase/supabase-js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// Deklarasi tipe untuk respons
 type AuthResponse = {
   user: User | null;
   session: Session | null;
@@ -15,10 +14,24 @@ export const registerUser = async (email: string, password: string): Promise<Aut
     email,
     password
   });
+
   if (error) {
     console.error('Error Register:', error.message);
     return { user: null, session: null, error };
   }
+
+  // Setelah register berhasil, simpan email dan password ke tabel 'users'
+  const { error: insertError } = await supabase
+    .from('users')
+    .insert([
+      { email: data?.user?.email, password } // Simpan email dan password
+    ]);
+
+  if (insertError) {
+    console.error('Error inserting into users table:', insertError.message);
+    return { user: null, session: null, error: insertError };
+  }
+
   return { user: data?.user || null, session: data?.session || null, error: null };
 }
 
@@ -28,6 +41,7 @@ export const loginUser = async (email: string, password: string): Promise<AuthRe
     email,
     password
   });
+
   if (error) {
     console.error('Error Login:', error.message);
     return { user: null, session: null, error };
