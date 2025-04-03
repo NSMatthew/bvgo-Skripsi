@@ -3,7 +3,15 @@ import { Alert, StyleSheet, View, AppState } from "react-native";
 import { supabase } from "../lib/supabase";
 import { Button, Input } from "@rneui/themed";
 
-export default function Login() {
+AppState.addEventListener("change", (state) => {
+  if (state === "active") {
+    supabase.auth.startAutoRefresh();
+  } else {
+    supabase.auth.stopAutoRefresh();
+  }
+});
+
+export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

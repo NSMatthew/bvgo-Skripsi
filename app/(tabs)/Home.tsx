@@ -1,9 +1,9 @@
 // Home.tsx
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { styles } from "../styles";  // Make sure styles are imported correctly
-import Carousel from '../../components/newsletterCard';
-import NewsSlider from '../../components/NewsSlider'; 
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import styles from "../styles"; // Make sure styles are imported correctly
+import Carousel from "../../components/newsletterCard";
+import NewsSlider from "../../components/NewsSlider";
 
 const HomeScreen = () => {
   return (

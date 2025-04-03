@@ -1,9 +1,19 @@
-import React from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 const newsData = [
-  { id: '1', title: 'Upcoming Maintenance', description: 'Scheduled for 2PM today' },
-  { id: '2', title: 'Follow up Maintenance', description: 'TBD' },
+  {
+    id: "1",
+    title: "Upcoming Maintenance",
+    description: "Scheduled for 2PM today",
+  },
+  { id: "2", title: "Follow up Maintenance", description: "TBD" },
 ];
 
 const NewsSlider = () => {
@@ -35,15 +45,15 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   flatList: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   newsItem: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     padding: 15,
     marginRight: 20,
     borderRadius: 10,
     width: 250, // You can adjust this width to match your design
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 5,
@@ -51,24 +61,24 @@ const styles = StyleSheet.create({
   },
   newsTitle: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: "bold",
+    color: "#333",
     marginBottom: 5,
   },
   newsDescription: {
     fontSize: 14,
-    color: '#555',
+    color: "#555",
     marginBottom: 10,
   },
   button: {
-    backgroundColor: '#007BFF', // Blue color for the button
+    backgroundColor: "#007BFF", // Blue color for the button
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 5,
   },
   buttonText: {
-    color: '#fff',
-    textAlign: 'center',
+    color: "#fff",
+    textAlign: "center",
   },
 });
 

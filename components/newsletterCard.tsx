@@ -1,5 +1,12 @@
-import React, { useState } from 'react';
-import { FlatList, View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from "react";
+import {
+  FlatList,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
 // Tipe untuk item yang digunakan dalam FlatList
 interface Item {
@@ -12,22 +19,22 @@ interface Item {
 // Data untuk Carousel
 const data: Item[] = [
   {
-    id: '1',
-    title: 'Pricing Adjustment',
-    description: 'Every Date = Different Price!',
-    imageUrl: 'https://via.placeholder.com/150',
+    id: "1",
+    title: "Pricing Adjustment",
+    description: "Every Date = Different Price!",
+    imageUrl: "https://via.placeholder.com/150",
   },
   {
-    id: '2',
-    title: 'Upcoming Maintenance',
-    description: 'Scheduled for 2PM today',
-    imageUrl: 'https://via.placeholder.com/150',
+    id: "2",
+    title: "Upcoming Maintenance",
+    description: "Scheduled for 2PM today",
+    imageUrl: "https://via.placeholder.com/150",
   },
   {
-    id: '3',
-    title: 'Marketing Tips',
-    description: 'Get more clients with these strategies',
-    imageUrl: 'https://via.placeholder.com/150',
+    id: "3",
+    title: "Marketing Tips",
+    description: "Get more clients with these strategies",
+    imageUrl: "https://via.placeholder.com/150",
   },
 ];
 
@@ -74,52 +81,52 @@ const Carousel = () => {
 const styles = StyleSheet.create({
   carouselContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 10,
   },
   card: {
     width: 300,
     height: 200,
-    backgroundColor: '#FFFFFF',  // Ganti warna putih dengan hex
+    backgroundColor: "#FFFFFF", // Ganti warna putih dengan hex
     borderRadius: 10,
     marginHorizontal: 10,
     padding: 20,
-    shadowColor: '#000000',  // Warna hitam dalam hex
+    shadowColor: "#000000", // Warna hitam dalam hex
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 3,
   },
   image: {
-    width: '100%',
+    width: "100%",
     height: 100,
     borderRadius: 10,
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 10,
-    color: '#333333',  // Warna abu-abu gelap dalam hex
+    color: "#333333", // Warna abu-abu gelap dalam hex
   },
   description: {
     fontSize: 14,
     marginVertical: 5,
-    color: '#555555',  // Warna abu-abu dalam hex
+    color: "#555555", // Warna abu-abu dalam hex
   },
   button: {
     marginTop: 10,
     padding: 10,
-    backgroundColor: '#007BFF',  // Warna biru dalam hex
+    backgroundColor: "#007BFF", // Warna biru dalam hex
     borderRadius: 5,
   },
   buttonText: {
-    color: '#FFFFFF',  // Warna putih
-    textAlign: 'center',
+    color: "#FFFFFF", // Warna putih
+    textAlign: "center",
   },
   pagination: {
     marginTop: 10,
     padding: 5,
-    backgroundColor: '#D3D3D3',  // Warna abu-abu muda dalam hex
+    backgroundColor: "#D3D3D3", // Warna abu-abu muda dalam hex
     borderRadius: 5,
   },
 });
