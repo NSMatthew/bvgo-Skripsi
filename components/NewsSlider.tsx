@@ -13,7 +13,9 @@ const newsData = [
     title: "Upcoming Maintenance",
     description: "Scheduled for 2PM today",
   },
-  { id: "2", title: "Follow up Maintenance", description: "TBD" },
+  { id: "2",
+    title: "Follow up Maintenance",
+    description: "TBD" },
 ];
 
 const NewsSlider = () => {
@@ -77,6 +79,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   buttonText: {
+    fontFamily: 'Satoshi',
     color: "#fff",
     textAlign: "center",
   },

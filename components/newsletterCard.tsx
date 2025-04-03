@@ -69,10 +69,6 @@ const Carousel = () => {
           setActiveIndex(index); // Memperbarui indeks aktif saat scroll
         }}
       />
-      {/* Menampilkan indeks slide aktif */}
-      <View style={styles.pagination}>
-        <Text>{`Slide: ${activeIndex + 1} of ${data.length}`}</Text>
-      </View>
     </View>
   );
 };
@@ -83,14 +79,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 10,
+    padding: 20,
   },
   card: {
     width: 300,
     height: 200,
     backgroundColor: "#FFFFFF", // Ganti warna putih dengan hex
     borderRadius: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 5,
     padding: 20,
     shadowColor: "#000000", // Warna hitam dalam hex
     shadowOpacity: 0.2,
@@ -114,7 +110,9 @@ const styles = StyleSheet.create({
     color: "#555555", // Warna abu-abu dalam hex
   },
   button: {
-    marginTop: 10,
+    width: 20,
+    height: 20,
+    marginTop: 5,
     padding: 10,
     backgroundColor: "#007BFF", // Warna biru dalam hex
     borderRadius: 5,
@@ -122,12 +120,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#FFFFFF", // Warna putih
     textAlign: "center",
-  },
-  pagination: {
-    marginTop: 10,
-    padding: 5,
-    backgroundColor: "#D3D3D3", // Warna abu-abu muda dalam hex
-    borderRadius: 5,
   },
 });
 

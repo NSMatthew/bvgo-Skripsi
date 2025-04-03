@@ -7,8 +7,7 @@ import { SignOutButton } from "@/components/SignOutButton";
 import { SignedIn } from "@clerk/clerk-expo";
 import { SignedOut } from "@clerk/clerk-expo";
 
-export default function Index() {
-  const { user } = useUser();
+export default function index() {
 
   return (
     <View>
